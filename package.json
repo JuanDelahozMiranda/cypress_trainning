@@ -1,0 +1,12 @@
+{
+    "name": "cypress-framework",
+    "version": "1.0.0",
+    "description": "E2E Framework Cypress",
+    "scripts": {
+      "cypress:open": "cypress open",
+      "cypress:run": "cypress run --headless --browser chrome"
+    },
+    "dependencies": {
+      "cypress": "^9.6.0"
+    }
+  }
