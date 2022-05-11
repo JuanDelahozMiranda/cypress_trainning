@@ -5,4 +5,8 @@ describe('Build first Test', ()=>{
         cy.get('.action-email')
           .type('fake@email.com').should('have.value', 'fake@email.com')
     })
+
+    Cypress.on('uncaught:exception', (err, runnable) =>{
+        return false;
+      })
 })
