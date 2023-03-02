@@ -31,7 +31,7 @@ describe("visit site", () => {
         //
     });
 
-    Cypress.on('uncaught:exception', (err, runnable) =>{
+    Cypress.on("uncaught:exception", (err, runnable) =>{
         return false;
     })
 })
