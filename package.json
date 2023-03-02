@@ -6,7 +6,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headless --browser chrome",
     "test:open": "npm run lint && cypress open",
-    "lint": "eslint ./cypress/integration/**/*.ts",
+    "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix"
   },
   "repository": { "type": "git", "url": "git+https://github.com/JuanDelahozMiranda/cypress_trainning.git" },
