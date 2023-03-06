@@ -11,24 +11,27 @@ describe("visit site", () => {
     });
 
     it("Login in sauce Page with Empty fields", () =>{
+        //Arrange
         homeContentPage.visitHomeContentPage();
+        //Action
         homeContentPage.goToLoginButton();
+        //Assertion
         homeContentPage.verifyErrorMessage("Epic sadface: Username is required");
     });
 
     it("Login in sauce Page with Valid credentials", () =>{
-        //
+        //Arrange
         homeContentPage.visitHomeContentPage();
         homeContentPage.typeUsername("standard_user");
         homeContentPage.typePassword("secret_sauce");
         homeContentPage.goToLoginButton();
-        //
+        //Action
         productpage.DisplayContainer();
         productpage.AddItem();
+        //Assertion
         productpage.verifyTitle("Sauce Labs Backpack");
         productpage.verifyPrice("$29.99");
         productpage.goToShoppingcar();
-        //
     });
 
     Cypress.on("uncaught:exception", (err, runnable) =>{
