@@ -3,19 +3,9 @@
         "target": "es5",
         "skipLibCheck": true,
         "strict": true,
-        "lib": [
-            "es5",
-            "dom"
-        ],
-        "types": [
-            "cypress",
-            "node"
-        ]
+        "lib": ["es5", "dom"],
+        "types": ["cypress", "node"]
     },
-    "include": [
-        "cypress/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules/"
-    ]
+    "include": ["cypress/**/*.ts", "cypress/plugins/index.js"],
+    "exclude": ["node_modules/"]
 }
