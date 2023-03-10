@@ -1,4 +1,4 @@
-import { HomeContentPage } from "../pages";
+import {HomeContentPage} from "../pages";
 import {ProductsContentPage} from "../pages";
 import {CheckoutContentPage} from "../pages";
 import {InformationContentPage} from "../pages";

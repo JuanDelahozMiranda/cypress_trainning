@@ -19,7 +19,7 @@ class ProductsContentPage {
 
     private findProductByName(In_Item: string): any {
         return cy.get(this.containerItems).find(this.availableItems).filter(`:contains("${In_Item}")`).find("button");
-      }
+    }
 
     public AddItem(In_Item: string):void{
         this.findProductByName(In_Item).click();
