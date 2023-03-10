@@ -3,6 +3,7 @@ import {ProductsContentPage} from "../pages";
 import {CheckoutContentPage} from "../pages";
 import {InformationContentPage} from "../pages";
 import {OverviewContentPage} from "../pages";
+import {CompletedContentPage} from "../pages";
 
 describe("visit site", () => {
     let homeContentPage: HomeContentPage;
@@ -10,6 +11,7 @@ describe("visit site", () => {
     let checkoutPage: CheckoutContentPage;
     let informationPage: InformationContentPage;
     let overviewPage: OverviewContentPage;
+    let completedPage: CompletedContentPage;
 
     before( ()=>{
         homeContentPage = new HomeContentPage();
@@ -17,6 +19,7 @@ describe("visit site", () => {
         checkoutPage = new CheckoutContentPage();
         informationPage = new InformationContentPage();
         overviewPage = new OverviewContentPage();
+        completedPage = new CompletedContentPage();
     });
 
     it("Login in sauce Page with Empty fields", () =>{
@@ -59,6 +62,9 @@ describe("visit site", () => {
         
         //Action
         overviewPage.ContinueBtn();
+        //Assertion
+        completedPage.verifySuccessMessage("Thank you for your order!");
+        completedPage.verifyLabelMessage("our order has been dispatched");
     });
 
     Cypress.on("uncaught:exception", (err, runnable) =>{
