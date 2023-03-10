@@ -39,7 +39,7 @@ describe("visit site", () => {
         homeContentPage.goToLoginButton();
         //Action
         productPage.DisplayContainer();
-        productPage.AddItem();
+        productPage.AddItem("Sauce Labs Backpack");
         //Assertion
         productPage.verifyTitle("Sauce Labs Backpack");
         productPage.verifyPrice("$29.99");
